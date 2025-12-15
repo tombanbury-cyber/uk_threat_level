@@ -10,7 +10,7 @@ from homeassistant.core import HomeAssistant
 from homeassistant.helpers.aiohttp_client import async_get_clientsession
 from homeassistant.helpers.update_coordinator import DataUpdateCoordinator, UpdateFailed
 
-from .const import DOMAIN, MI5_URL, LEVEL_TO_NUMBER
+from .const import DOMAIN, MI5_RSS_URL , LEVEL_TO_NUMBER
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -80,3 +80,4 @@ class UKThreatLevelCoordinator(DataUpdateCoordinator[dict]):
             }
         except Exception as err:
             raise UpdateFailed(f"All sources failed: {err}") from err
+
