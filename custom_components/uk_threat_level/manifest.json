@@ -1,7 +1,7 @@
 {
   "domain": "uk_threat_level",
   "name": "UK Terrorism Threat Level (MI5)",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "documentation": "https://www.mi5.gov.uk/threats-and-advice/terrorism-threat-levels",
   "issue_tracker": "https://github.com/YOUR_GITHUB_USER/uk_threat_level/issues",
   "codeowners": ["tombanbury-cyber"],
