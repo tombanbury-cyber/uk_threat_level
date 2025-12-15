@@ -1,0 +1,7 @@
+{
+  "name": "UK Threat Level (MI5)",
+  "content_in_root": false,
+  "domains": ["uk_threat_level"],
+  "country": "GB",
+  "render_readme": true
+}

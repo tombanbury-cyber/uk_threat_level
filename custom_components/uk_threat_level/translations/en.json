@@ -1,0 +1,10 @@
+{
+  "config": {
+    "step": {
+      "user_input": {
+        "title": "UK Threat Level",
+        "description": "Creates sensors for the UK terrorism threat level published by MI5."
+      }
+    }
+  }
+}

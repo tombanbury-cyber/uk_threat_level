@@ -1,0 +1,11 @@
+{
+  "domain": "uk_threat_level",
+  "name": "UK Terrorism Threat Level (MI5)",
+  "version": "1.0.0",
+  "documentation": "https://www.mi5.gov.uk/threats-and-advice/terrorism-threat-levels",
+  "issue_tracker": "https://github.com/YOUR_GITHUB_USER/uk_threat_level/issues",
+  "codeowners": ["@YOUR_GITHUB_USER"],
+  "iot_class": "cloud_polling",
+  "config_flow": true,
+  "requirements": []
+}
