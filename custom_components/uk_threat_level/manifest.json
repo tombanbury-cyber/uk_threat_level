@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "documentation": "https://www.mi5.gov.uk/threats-and-advice/terrorism-threat-levels",
   "issue_tracker": "https://github.com/YOUR_GITHUB_USER/uk_threat_level/issues",
-  "codeowners": ["@YOUR_GITHUB_USER"],
+  "codeowners": ["tombanbury-cyber"],
   "iot_class": "cloud_polling",
   "config_flow": true,
   "requirements": []
