@@ -1,18 +1,18 @@
-from __future__ import annotations
-
-import asyncio
 import logging
 import re
+import xml.etree.ElementTree as ET
 from datetime import timedelta
 
-from homeassistant.config_entries import ConfigEntry
-from homeassistant.core import HomeAssistant
 from homeassistant.helpers.aiohttp_client import async_get_clientsession
 from homeassistant.helpers.update_coordinator import DataUpdateCoordinator, UpdateFailed
 
-from .const import DOMAIN, MI5_RSS_URL , LEVEL_TO_NUMBER
+from .const import DOMAIN, MI5_RSS_URL, GOVUK_URL, LEVEL_TO_NUMBER
 
 _LOGGER = logging.getLogger(__name__)
+
+RE_LEVEL_WORD = re.compile(r"\b(LOW|MODERATE|SUBSTANTIAL|SEVERE|CRITICAL)\b", re.IGNORECASE)
+RE_GOVUK = re.compile(r"threat to the UK .*? from terrorism is (\w+)", re.IGNORECASE)
+
 
 # MI5 page contains a header line like:
 # "Current Threat Level:  SUBSTANTIAL"
@@ -80,4 +80,5 @@ class UKThreatLevelCoordinator(DataUpdateCoordinator[dict]):
             }
         except Exception as err:
             raise UpdateFailed(f"All sources failed: {err}") from err
+
 
